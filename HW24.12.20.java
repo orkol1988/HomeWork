@@ -56,6 +56,9 @@ public class Main {
         int i6 = numbers_arr.length - 1;
         int counter = 0;
         for (int i5 = 0; i5 < numbers_arr.length / 2; i5++) {
+            if (numbers_arr.length % 2 != 0) {
+                break;
+            }
             if (numbers_arr[i5] == numbers_arr[i6]) {
                 counter++;
             }
