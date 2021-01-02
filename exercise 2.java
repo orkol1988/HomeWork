@@ -98,7 +98,9 @@ public class Main {
 
                 if (arr_num9_a[i7] == arr_num9_b[i7]) {
                     count2++;
-                } else break;
+                } 
+                else {
+                    break;
             }
             if (count2 == arr_num9_a.length) {
                 System.out.println("the arrays are identical");
@@ -118,7 +120,9 @@ public class Main {
         for (int i9 = 0; i9 < arr_num10_a.length; i9++) {
             if (arr_num10_a[i9] == arr_num10_b[i9]) {
                 count14++;
-            } else break;
+            } 
+            else {
+                break;
             }
             if (count14 == arr_num10_a.length) {
                 System.out.println("Access granted!!");
