@@ -124,12 +124,12 @@ public class Main {
             else {
                 break;
             }
-            if (count14 == arr_num10_a.length) {
-                System.out.println("Access granted!!");
             }
-            else {
-                System.out.println("Wrong!!");
-            }
+        if (count14 == arr_num10_a.length) {
+            System.out.println("Access granted!!");
+        }
+        else {
+            System.out.println("Wrong!!");
 
 
         //15.
