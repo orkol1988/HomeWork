@@ -114,13 +114,13 @@ public class Main {
             arr_num10_b[i8] = s.nextInt();
         }
 
-        int count2 = 0;
+        int count14 = 0;
         for (int i9 = 0; i9 < arr_num10_a.length; i9++) {
             if (arr_num10_a[i9] == arr_num10_b[i9]) {
-                count2++;
+                count14++;
             } else break;
             }
-            if (count2 == arr_num10_a.length) {
+            if (count14 == arr_num10_a.length) {
                 System.out.println("Access granted!!");
             }
             else {
