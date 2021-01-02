@@ -318,10 +318,8 @@ public class Main {
 
 
         //28.
-        String[] arr_asterisk = {"*", "* *", "* * *", "* * * *", "* * * * *"};
-        String[] arr_space = {"    ", "   ", "  ", " ", ""};
+        String[] arr_asterisk = {"    *", "   * *", "  * * *", " * * * *", "* * * * *"};
         for (int i28 = 0; i28 < arr_asterisk.length; i28++) {
-            System.out.print(arr_space[i28]);
             System.out.print(arr_asterisk[i28]);
             System.out.println();
         }
