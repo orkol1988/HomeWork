@@ -161,14 +161,19 @@ public class Main {
 
 
         //18.
-        int[] arr_num11 = {1, 6, 30, 4, 10, 25, 15, 17, 14};
+        int[] arr_num11 = {1, 6, 30, 4, -25, 10, 25, 15, 17, 14, -10};
+        int small = 0;
         int big = 0;
         for (int i13 = 0; i13 < arr_num11.length; i13++) {
             if (arr_num11[i13] > big){
                 big = arr_num11[i13];
             }
+            if (arr_num11[i13] < small) {
+                small = arr_num11[i13];
+            }
         }
         System.out.println(String.format("The largest number is: %d", big));
+        System.out.println(String.format("The smallest number is: %d", small));
 
 
         //19.
