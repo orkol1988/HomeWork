@@ -112,8 +112,16 @@ public class Main {
 
 
         //Q22
-        char[] password_arr = {'p', 'a','s','s','1','2','3', '4'};
-        System.out.println(passwordChek(password_arr, "Please enter your password:"));
+        char[] password_arr = {'p', 'a', 's', 's', '1', '2', '3', '4'};
+        char[] password_arr2 = {'p', 'a', 's', 's', '1', '2', '3', '4', '4'};
+        char[] password_arr3 = {'p', 'a', 's', 's', '1', '2', '3'};
+        char[] password_arr4= {'p', 'a', 's', 's', 's', 's', 's', 's'};
+        char[] password_arr5 = {'1', '1', '1', '1', '1', '2', '3', '4'};
+        System.out.println(passwordChek(password_arr));
+        System.out.println(passwordChek(password_arr2));
+        System.out.println(passwordChek(password_arr3));
+        System.out.println(passwordChek(password_arr4));
+        System.out.println(passwordChek(password_arr5));
 
 
         //Q23
@@ -169,19 +177,21 @@ public class Main {
 
     //Q22
     public static String passwordChek (char[] fn_arr1, String a) {
-        int count = 0;
-        System.out.println(a);
-        String user = s.next();
-        char[] user_arr = user.toCharArray();
-        for (int i = 0; i < fn_arr1.length; i++) {
-            if (fn_arr1[i] == user_arr[i]) {
-                count++;
-            }
-            else {
-                break;
+        int count_digit = 0;
+        int count_letter = 0;
+        if (fn_arr1.length >= 8) {
+            for (int i = 0; i < fn_arr1.length; i++) {
+                if (Character.isDigit(fn_arr1[i])) {
+                    count_digit++;
+                } else if (Character.isLetter(fn_arr1[i])) {
+                    count_letter++;
+                }
+                if (count_digit > 0 && count_letter > 0) {
+                    break;
+                }
             }
         }
-        return count == fn_arr1.length ? "true" : "false";
+        return count_digit > 0 && count_letter > 0 ? "true" : "false";
     }
 
 
