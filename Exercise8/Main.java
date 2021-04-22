@@ -59,17 +59,11 @@ public class Main {
             int countNumOpenLate = 0;
             int countNumOfLarge = 0;
             for (int i2 = 0; i2 < stores.size(); i2++) {
-                if (stores.get(i2).IsRestaurant == 1) {
-                    countNumOfRestaurants++;
-                }
+                countNumOfRestaurants += stores.get(i2).IsRestaurant;
 
-                if (stores.get(i2).IsOpenLate == 1) {
-                    countNumOpenLate++;
-                }
+                countNumOpenLate += stores.get(i2).IsOpenLate;
 
-                if (stores.get(i2).IsLarge == 1) {
-                    countNumOfLarge++;
-                }
+                countNumOfLarge += stores.get(i2).IsLarge;
             }
             statisticsREPO.update(String.format("INSERT INTO Statistics (Floor, NumberOfRestaurants, NumberOfOpenLate, NumberOfLargeStores) " +
                     "Values (%d, %d, %d, %d)", i1, countNumOfRestaurants, countNumOpenLate, countNumOfLarge));
